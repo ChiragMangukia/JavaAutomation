@@ -20,7 +20,6 @@ public class InvokeBrowser {
 		driver.getTitle();
 		System.out.println(driver.getTitle());
 		driver.findElement(By.id("email")).sendKeys("chiragmangukia");
-		//driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
 		Thread.sleep(10000);
 		driver.close();
 	}
