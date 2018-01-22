@@ -16,7 +16,7 @@ public class InvokeBrowser {
 		
 		driver.get("https://www.facebook.com");
 		driver.findElement(By.id("email")).sendKeys("chiragmangukia");
-		driver.close();
+		//driver.close();
 	}
 
 }
