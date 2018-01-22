@@ -15,6 +15,8 @@ public class InvokeBrowser {
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.facebook.com");
+		driver.getTitle();
+		System.out.println(driver.getTitle());
 		driver.findElement(By.id("email")).sendKeys("chiragmangukia");
 		//driver.close();
 	}
