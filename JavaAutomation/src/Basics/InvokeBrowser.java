@@ -1,7 +1,5 @@
 package Basics;
 import java.io.File;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +10,7 @@ public class InvokeBrowser {
 		
 		File filePath = new File("BrowserDrivers", "chromedriver.exe");
 		
-		System.setProperty("webdriver.chrome.driver", filePath.getAbsolutePath());
+		System.setProperty("webdriver.chrome.driver", filePath.getPath());
 		
 		WebDriver driver = new ChromeDriver();
 		
