@@ -21,7 +21,7 @@ public class InvokeBrowser {
 		driver.findElement(By.id("email")).sendKeys("chiragmangukia");
 		Thread.sleep(3000);
 		driver.close();
-		//Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
+		Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
 	}
 
 }
