@@ -15,11 +15,17 @@ public class InvokeBrowser {
 		
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://www.facebook.com");
+		String webPage = "https://www.facebook.com";
+		driver.get(webPage);
 		driver.getTitle();
 		System.out.println(driver.getTitle());
 		driver.findElement(By.id("email")).sendKeys("chiragmangukia");
+		
 		Thread.sleep(3000);
+		
+		myMethods myMethodsObj = new myMethods();
+		myMethodsObj.takeScreenshot("E:\\Automation\\Git\\JavaAutomation\\JavaAutomation\\Misc\\MyAutomationScreenshot.png", driver);
+		
 		driver.close();
 		Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
 	}
