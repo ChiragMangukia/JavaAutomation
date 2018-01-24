@@ -20,7 +20,8 @@ public class InvokeBrowser {
 		String webPage = "https://www.facebook.com";
 		driver.get(webPage);
 		driver.getTitle();
-		System.out.println(driver.getTitle());
+		String pageTitle = driver.getTitle();
+		System.out.println(pageTitle);
 		driver.findElement(By.id("email")).sendKeys("chiragmangukia");
 		
 		Thread.sleep(2000);
