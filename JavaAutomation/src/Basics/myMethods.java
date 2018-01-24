@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 
 public class myMethods {
 	
-	public void takeScreenshot(String pathName, WebDriver webElement) throws IOException {
+	public void Screenshot(WebDriver webElement, String pathName) throws IOException {
 		
 		File file = ((TakesScreenshot)webElement).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(file, new File(pathName));

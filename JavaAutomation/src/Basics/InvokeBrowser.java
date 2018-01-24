@@ -15,6 +15,8 @@ public class InvokeBrowser {
 		
 		WebDriver driver = new ChromeDriver();
 		
+		driver.manage().window().maximize();
+		
 		String webPage = "https://www.facebook.com";
 		driver.get(webPage);
 		driver.getTitle();
@@ -24,7 +26,7 @@ public class InvokeBrowser {
 		Thread.sleep(2000);
 		
 		myMethods myMethodsObj = new myMethods();
-		myMethodsObj.takeScreenshot("E:\\Automation\\Git\\JavaAutomation\\JavaAutomation\\Misc\\MyAutomationScreenshot.png", driver);
+		myMethodsObj.Screenshot(driver, "E:\\Automation\\Git\\JavaAutomation\\JavaAutomation\\Misc\\MyAutomationScreenshot.png");
 		
 		driver.close();
 		Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
