@@ -21,7 +21,7 @@ public class InvokeBrowser {
 		System.out.println(driver.getTitle());
 		driver.findElement(By.id("email")).sendKeys("chiragmangukia");
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		myMethods myMethodsObj = new myMethods();
 		myMethodsObj.takeScreenshot("E:\\Automation\\Git\\JavaAutomation\\JavaAutomation\\Misc\\MyAutomationScreenshot.png", driver);
