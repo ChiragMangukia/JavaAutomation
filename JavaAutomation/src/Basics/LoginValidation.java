@@ -1,19 +1,17 @@
 package Basics;
 
 import java.io.File;
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginValidation {
 
-	public static void main(String[] args) {
-		
-		File filePath = new File("BrowserDrivers", "chromedriver.exe");
-		
-		System.setProperty("webdriver.chrome.driver", filePath.getAbsolutePath());
-		
-		WebDriver driver = new ChromeDriver();
+	public static void main(String[] args) throws IOException {
+				
+		WebDriver driver = myMethods.Driver();
 		
 		String tarUrl = "https://login.salesforce.com/";
 		driver.get(tarUrl);
@@ -31,6 +29,7 @@ public class LoginValidation {
 		}
 		
 		driver.close();
+		myMethods.killProcess();
 
 	}
 

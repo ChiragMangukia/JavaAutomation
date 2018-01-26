@@ -22,5 +22,9 @@ public class myMethods {
 		WebDriver driver = new ChromeDriver();		
 		return driver;		
 	}
+	
+	public static void killProcess() throws IOException {
+		Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
+	}
 
 }

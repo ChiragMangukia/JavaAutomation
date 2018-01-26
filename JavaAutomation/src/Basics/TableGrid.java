@@ -20,7 +20,7 @@ public class TableGrid {
 			System.out.println(table.findElements(By.cssSelector("div[class='cb-col cb-col-100 cb-scrd-itms'] div:nth-child(3)")).get(i).getText());
 		}
 		
-		Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
+		myMethods.killProcess();
 
 	}
 
