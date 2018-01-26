@@ -11,7 +11,8 @@ public class RadioButton {
 	public static void main(String[] args) throws IOException {
 		
 		try {
-			radioButton();
+			//radioButton();
+			radioButtonDynamically();
 		} finally {
 			myMethods.killProcess();
 		}
@@ -25,6 +26,23 @@ public class RadioButton {
 		driver.findElement(By.xpath("//input[@value='Cheese']")).click();
 		int count = driver.findElements(By.xpath("//input[@name='group1']")).size();
 		System.out.println(count);
+		
+	}
+	
+	private static void radioButtonDynamically() {
+		
+		driver.get("http://www.echoecho.com/htmlforms10.htm");
+		
+		int count = driver.findElements(By.xpath("//input[@name='group1']")).size();
+		
+		for(int i=0; i<count; i++) {
+			String text = driver.findElements(By.xpath("//input[@name='group1']")).get(i).getAttribute("value");
+			System.out.println(text);
+			
+			if(text.equals("Cheese")) {
+				driver.findElements(By.xpath("//input[@name='group1']")).get(i).click();
+			}
+		}
 		
 	}
 
