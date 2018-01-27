@@ -11,8 +11,8 @@ public class ElementsOnPage {
 	public static void main(String[] args) throws IOException {
 		
 		try {
-			//elementVisibility();
-			elementPresent();
+			elementVisibility();
+			//elementPresent();
 		} finally {
 			myMethods.killProcess();
 		}
