@@ -27,10 +27,14 @@ public class JavascriptAlert {
 		
 		driver.get(fileUrl);
 		
+		String alertText = driver.findElement(By.xpath("//button[text()='Try it']")).getText();
 		driver.findElement(By.xpath("//button[text()='Try it']")).click();
 		driver.switchTo().alert().dismiss();
 		String text = driver.findElement(By.id("demo")).getText();
+		System.out.println("Alertbox Text : " + alertText);
 		System.out.println(text);
+		
+		//driver.findElement(By.id("demo")).sendKeys("Alertbox Input"); To give inputs in alertbox
 	}
 
 }
