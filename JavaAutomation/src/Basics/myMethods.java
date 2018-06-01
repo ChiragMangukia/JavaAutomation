@@ -16,11 +16,11 @@ public class myMethods {
 		FileUtils.copyFile(file, new File(pathName));		
 	}
 	
-	public static WebDriver Driver() {	
+	public static WebDriver Driver() {
 		File filePath = new File("BrowserDrivers", "chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", filePath.getPath());		
-		WebDriver driver = new ChromeDriver();		
-		return driver;		
+		WebDriver driver = new ChromeDriver();
+		return driver;
 	}
 	
 	public static void killProcess() throws IOException {
