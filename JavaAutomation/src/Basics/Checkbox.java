@@ -9,6 +9,7 @@ public class Checkbox {
 
 	private static WebDriver driver = myMethods.Driver();
 	
+	
 	public static void main(String[] args) throws IOException {
 		
 		try {
@@ -20,6 +21,7 @@ public class Checkbox {
 	}
 	
 	private static void checkBox() {
+		
 		
 		driver.get("http://www.spicejet.com");
 		

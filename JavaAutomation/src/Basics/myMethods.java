@@ -8,6 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class myMethods {
 	
@@ -18,8 +19,10 @@ public class myMethods {
 	
 	public static WebDriver Driver() {
 		File filePath = new File("BrowserDrivers", "chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", filePath.getPath());		
-		WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", filePath.getPath());
+		ChromeOptions options = new ChromeOptions();
+		options.setHeadless(true);
+		WebDriver driver = new ChromeDriver(options);
 		return driver;
 	}
 	
