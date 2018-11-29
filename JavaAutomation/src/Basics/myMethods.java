@@ -20,9 +20,9 @@ public class myMethods {
 	public static WebDriver Driver() {
 		File filePath = new File("BrowserDrivers", "chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", filePath.getPath());
-		ChromeOptions options = new ChromeOptions();
-		options.setHeadless(true);
-		WebDriver driver = new ChromeDriver(options);
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.setHeadless(true);
+		WebDriver driver = new ChromeDriver(chromeOptions);
 		return driver;
 	}
 	
