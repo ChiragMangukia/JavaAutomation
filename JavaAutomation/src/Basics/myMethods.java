@@ -12,10 +12,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class myMethods {
 	
-	//public void Screenshot(WebDriver webElement, String pathName) throws IOException {		
-	//	File file = ((TakesScreenshot)webElement).getScreenshotAs(OutputType.FILE);
-	//	FileUtils.copyFile(file, new File(pathName));		
-	//}
+	public void Screenshot(WebDriver webElement, String pathName) throws IOException {		
+	File file = ((TakesScreenshot)webElement).getScreenshotAs(OutputType.FILE);
+	FileUtils.copyFile(file, new File(pathName));		
+	}
 	
 	public static WebDriver Driver() {
 		File filePath = new File("BrowserDrivers", "chromedriver.exe");
